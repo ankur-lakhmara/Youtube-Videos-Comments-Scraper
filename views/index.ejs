@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youtube Video comments Scraper</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="text-center">
+            Youtube Video Comment Scraper
+        </h1>
+        <form action="/getcomments" method="post">
+            <div class="form-group">
+                <label for="url">Enter the Youtube video URL</label>
+                <input class="form-control" type="text" name="url" required
+                    placeholder="https://www.youtube.com/watch?v=AEnFuSQPPYg" id="">
+            </div>
+            <div class="form-group">
+                <button class="btn btn-danger btn-block">
+                    Get Comments
+                </button>
+            </div>
+        </form>
+        <%if(comments){%>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Comment</th>
+                        <th>Published Time</th>
+                        <th>Likes</th>
+                        <th>Hearted </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <%comments.forEach(comment=> {%>
+                        <tr>
+                            <td>
+                                <%=comment.author%>
+                            </td>
+                            <td>
+                                <%=comment.text%>
+                            </td>
+                            <td>
+                                <%=comment.time%>
+                            </td>
+                            <td>
+                                <%=comment.likes%>
+                            </td>
+
+
+                            <td>
+                                <%=comment.isHearted%>
+                            </td>
+                            
+                        </tr>
+                        <%})%>
+                </tbody>
+                
+            </table>
+            <%}%>
+    </div>
+</body>
+</html>
