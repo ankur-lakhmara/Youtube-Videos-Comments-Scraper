@@ -8,4 +8,4 @@ This App can scrap the comments from youtube videos by their URLS
 - Enter any youtube video URL
 
 ### web page looks like : 
-![image](https://user-images.githubusercontent.com/59440628/226679132-e774e5c2-939a-481e-961e-877330b4d9c8.png)
+![YT comment scraper](https://user-images.githubusercontent.com/59440628/227755027-72fc3ab4-ab15-4288-86b5-d597b0d9356b.gif)
